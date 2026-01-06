@@ -1,0 +1,13 @@
+{
+  "name": "yacoordinate",
+  "version": "1.0.1",
+  "description": "A coordinate library can use any dimensions",
+  "license": "MIT",
+  "author": "yangycl",
+  "type": "module",
+  "main": "index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
