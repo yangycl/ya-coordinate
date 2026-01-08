@@ -32,6 +32,15 @@ class Coordinate {
     clone() {
         return new Coordinate(this.coordinate.slice());
     }
+    project(n) {
+        let coor = this.clone();
+        for (let i = 0; i < n; i++) {
+            if (i > coor.coordinate.length)
+                throw new Error("length < n");
+            coor.coordinate.pop();
+        }
+        return coor;
+    }
 }
 exports.Coordinate = Coordinate;
 const a = new Coordinate([0, 0, 0]);

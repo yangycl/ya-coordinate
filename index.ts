@@ -24,6 +24,11 @@ export class Coordinate {
     clone(){
         return new Coordinate(this.coordinate.slice());
     }
+    project(n:number){
+        let coor = this.clone();
+        coor.coordinate.slice(0, -2);
+        return coor;  
+    }
 }
 const a = new Coordinate([0, 0, 0]);
 const b = new Coordinate([3, 4, 0]);

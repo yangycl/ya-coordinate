@@ -5,4 +5,5 @@ export declare class Coordinate {
     static distance(coorArr: [Coordinate, Coordinate]): number;
     add(value: number, dimension?: number): Coordinate;
     clone(): Coordinate;
+    project(n: number): Coordinate;
 }
