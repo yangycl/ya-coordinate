@@ -26,7 +26,7 @@ export class Coordinate {
     }
     project(n:number){
         let coor = this.clone();
-        coor.coordinate = coor.coordinate.slice(0, -2);
+        coor.coordinate = coor.coordinate.slice(0, -n);
         return coor;  
     }
 }
