@@ -34,11 +34,7 @@ class Coordinate {
     }
     project(n) {
         let coor = this.clone();
-        for (let i = 0; i < n; i++) {
-            if (i > coor.coordinate.length)
-                throw new Error("length < n");
-            coor.coordinate.pop();
-        }
+        coor.coordinate = coor.coordinate.slice(0, -2);
         return coor;
     }
 }
