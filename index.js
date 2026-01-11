@@ -37,6 +37,13 @@ class Coordinate {
         coor.coordinate = coor.coordinate.slice(0, -n);
         return coor;
     }
+    projection() {
+        let length = this.coordinate.length - 1;
+        let notUse = this.coordinate[length];
+        let after = this.clone();
+        after.coordinate = after.coordinate.map(x => (notUse - +1) * x);
+        return after;
+    }
 }
 exports.Coordinate = Coordinate;
 const a = new Coordinate([0, 0, 0]);

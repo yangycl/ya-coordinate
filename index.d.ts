@@ -6,4 +6,5 @@ export declare class Coordinate {
     add(value: number, dimension?: number): Coordinate;
     clone(): Coordinate;
     project(n: number): Coordinate;
+    projection(): Coordinate;
 }
