@@ -41,7 +41,7 @@ class Coordinate {
         let length = this.coordinate.length - 1;
         let notUse = this.coordinate[length];
         let after = this.clone();
-        after.coordinate = after.coordinate.map(x => (notUse - +1) * x);
+        after.coordinate = after.coordinate.map(x => x / (notUse - +1));
         return after;
     }
 }
