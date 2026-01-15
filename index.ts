@@ -33,7 +33,9 @@ export class Coordinate {
         let length = this.coordinate.length - 1;
         let notUse = this.coordinate[length];
         let after = this.clone();
-        after.coordinate = after.coordinate.map(x =>x / (notUse -+1));
+        if(notUse === 0) throw new Error("Cannot project when the last coordinate is 0");
+        after.coordinate = after.coordinate.map(x =>x / notUse);
+        after.coordinate.pop();
         return after;
     }
 }
